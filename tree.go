@@ -9,9 +9,9 @@ import (
 )
 
 const (
-	emptySpace   = "    "
+	emptySpace   = "\t"
 	middleItem   = "├───"
-	continueLine = "│   "
+	continueLine = "│\t"
 	lastItem     = "└───"
 )
 
