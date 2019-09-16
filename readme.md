@@ -15,7 +15,7 @@ $ go get -u github.com/std0/gotree
 Use [`go run`](https://golang.org/cmd/go/#hdr-Compile_and_run_Go_program) or [`go build`](https://golang.org/cmd/go/#hdr-Compile_packages_and_dependencies) to run or build the program, respectively.
 
 ```sh
-$ go run tree.go PATH [options]
+$ go run main.go PATH [options]
 ```
 
 ```sh
@@ -32,8 +32,8 @@ Available options:
 ## Example
 
 ```sh
-$ go run tree.go test -f
-test
+$ go run main.go testdata -f
+testdata
 ├───dir1
 │   ├───dir1_1
 │   │   └───text1_1_1.txt (665b)
@@ -45,8 +45,8 @@ test
 
 ```sh
 $ go build
-$ ./gotree test -f
-test
+$ ./gotree testdata -f
+testdata
 ├───dir1
 │   ├───dir1_1
 │   │   └───text1_1_1.txt (665b)

@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-const testFullResult = `test
+const testFullResult = `testdata
 ├───dir1
 │	├───dir1_1
 │	│	└───text1_1_1.txt (665b)
@@ -17,7 +17,7 @@ const testFullResult = `test
 
 func TestFullTree(t *testing.T) {
 	out := new(bytes.Buffer)
-	err := tree(out, "test", "", true)
+	err := tree(out, "testdata", "", true)
 	if err != nil {
 		t.Errorf("Full tree test failed, error:\n%v", err)
 	}
@@ -28,7 +28,7 @@ func TestFullTree(t *testing.T) {
 	}
 }
 
-const testDirResult = `test
+const testDirResult = `testdata
 ├───dir1
 │	└───dir1_1
 └───dir2
@@ -36,7 +36,7 @@ const testDirResult = `test
 
 func TestDirTree(t *testing.T) {
 	out := new(bytes.Buffer)
-	err := tree(out, "test", "", false)
+	err := tree(out, "testdata", "", false)
 	if err != nil {
 		t.Errorf("Dir tree test failed, error:\n%v", err)
 	}

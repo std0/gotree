@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"io"
-	"path/filepath"
 	"io/ioutil"
+	"os"
+	"path/filepath"
 )
 
 const (
@@ -56,14 +56,14 @@ func tree(out io.Writer, path, indent string, withFiles bool) error {
 
 	for i, subFile := range subFiles {
 		newIndent := continueLine
-		if i == len(subFiles) - 1 {
-			fmt.Fprintf(out, indent + lastItem)
+		if i == len(subFiles)-1 {
+			fmt.Fprintf(out, indent+lastItem)
 			newIndent = emptySpace
 		} else {
-			fmt.Fprintf(out, indent + middleItem)
+			fmt.Fprintf(out, indent+middleItem)
 		}
 
-		err := tree(out, path + "/" + subFile.Name(), indent + newIndent, withFiles)
+		err := tree(out, path+"/"+subFile.Name(), indent+newIndent, withFiles)
 		if err != nil {
 			return err
 		}

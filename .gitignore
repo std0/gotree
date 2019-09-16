@@ -1,2 +1,6 @@
-/.idea
-/bin
+# IDE project settings
+.idea
+.vscode
+
+# Executables
+*.exe
